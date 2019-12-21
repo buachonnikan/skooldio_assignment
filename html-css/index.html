@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Skooldio Assignment</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Prompt:300,400,500,600&display=swap&subset=thai"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <body>
+    <div class="container set-center">
+      <div class="card" id="card">
+        <div class="card-content item">
+          <div class="head">
+            <div class="fac-logo">
+              <img src="./img/engi.svg" alt="engineer logo" />
+            </div>
+            <div style="flex-grow: 8;">
+              <div class="fac">คณะวิศวกรรมศาสตร์</div>
+              <div class="branch">สาขาวิศวกรรมทั่วไป</div>
+              <div class="uni">จุฬาลงกรณ์มหาวิทยาลัย</div>
+            </div>
+            <div style="flex-grow: 1;">
+              <img src="./img/page-1.svg" alt="heart" id="heart" />
+            </div>
+          </div>
+          <div class="content">
+            <div class="round-open">
+              <div id="round">รอบที่เปิด</div>
+              <div class="r">
+                <div class="round set-center" id="r-true">1</div>
+                <div class="round set-center" id="r-true">2</div>
+                <div class="round set-center" id="r-false">3</div>
+                <div class="round set-center" id="r-true">4</div>
+                <div class="round set-center" id="r-false">5</div>
+              </div>
+            </div>
+            <div class="edit-score">
+              <div class="round-no">รอบที่ 4 : Admission</div>
+              <button class="edit-but set-center">
+                แก้ไขคะแนน
+                <img src="./img/group-3-copy-4.svg" alt="heart" id="heart" />
+              </button>
+            </div>
+            <div class="score">
+              <div class="own">
+                <div class="set-center" style="flex-grow: 1;">
+                  <img src="./img/page-1-copy-2.svg" alt="star" />
+                </div>
+                <div
+                  style="display: flex; flex-direction: column; flex-grow: 2;"
+                >
+                  <div id="own-text">คะแนนของคุณคือ</div>
+                  <div id="own-score">23,453</div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-score side set-center" alt="min">
+                  <div class="ss">20,845</div>
+                  <div class="st">คะแนนต่ำสุด 60</div>
+                </div>
+                <div class="stat-score side  set-center" alt="avg">
+                  <div class="ss">20,845</div>
+                  <div class="st">คะแนนเฉลี่ย 60</div>
+                </div>
+                <div class="stat-score set-center" alt="max">
+                  <div class="ss">20,845</div>
+                  <div class="st">คะแนนสูงสุด 60</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part" onclick="myFunction()">
+            <i class="fa fa-caret-down" id="arrow-down"></i>
+            <i class="fa fa-caret-up" id="arrow-up" style="display: none;"></i>
+            ดูสัดส่วนคะแนน
+          </div>
+          <div id="expand" style="display: none;">สัดส่วนคะแนนๆๆ</div>
+          <div class="people">
+            <div><i class="fa fa-user"></i>10 คนที่สนใจ</div>
+            <button class="save">
+              <img src="./img/group-2.svg" alt="save" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var click = false;
+    function myFunction() {
+      var card = document.getElementById("card");
+      var expand = document.getElementById("expand");
+      var down = document.getElementById("arrow-down");
+      var up = document.getElementById("arrow-up");
+      click = !click;
+      if (click) {
+        card.style.height = "550px";
+        down.style.display = "none";
+        up.style.display = "initial";
+        expand.style.height = "57px";
+        expand.style.display = "initial";
+      } else {
+        card.style.height = "493px";
+        down.style.display = "initial";
+        up.style.display = "none";
+        expand.style.display = "none";
+      }
+      console.log("test");
+    }
+  </script>
+</html>
